@@ -1,0 +1,117 @@
+\doxysection{Text Class Reference}
+\hypertarget{struct_text}{}\label{struct_text}\index{Text@{Text}}
+
+
+\doxylink{struct_text}{Text} shape class.  
+
+
+
+
+{\ttfamily \#include $<$shapes.\+h$>$}
+
+
+
+Inheritance diagram for Text\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{struct_text__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Text\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{struct_text__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_text_ab3e26143fccc52699bcc5149cae852bc}{Text}} ()
+\item 
+\mbox{\hyperlink{struct_text_aa45a27f780dda907a9086bac8744c0c7}{Text}} (std\+::string\+\_\+view text)
+\item 
+void \mbox{\hyperlink{struct_text_a8f486a54a21fafc7a5dfb75975f1621f}{draw}} () override
+\item 
+std\+::string \mbox{\hyperlink{struct_text_ad789c5524178dd067b713a375a10ff8c}{get\+Key}} () const override
+\item 
+std\+::string \mbox{\hyperlink{struct_text_a92e0b62a535978273a057a5e9077319b}{serialize}} () const override
+\item 
+bool \mbox{\hyperlink{struct_text_a799085b9549398763886b61d75e8f3e8}{parse}} (std\+::string\+\_\+view source) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_abstract_shape}{Abstract\+Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_abstract_shape_afec2c50f04464edef196d383993445aa}{\texorpdfstring{$\sim$}{\string~}\+Abstract\+Shape}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_text}{Text} shape class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_text_ab3e26143fccc52699bcc5149cae852bc}\index{Text@{Text}!Text@{Text}}
+\index{Text@{Text}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_text_ab3e26143fccc52699bcc5149cae852bc} 
+Text\+::\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_text_aa45a27f780dda907a9086bac8744c0c7}\index{Text@{Text}!Text@{Text}}
+\index{Text@{Text}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_text_aa45a27f780dda907a9086bac8744c0c7} 
+Text\+::\+Text (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_text_a8f486a54a21fafc7a5dfb75975f1621f}\index{Text@{Text}!draw@{draw}}
+\index{draw@{draw}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{struct_text_a8f486a54a21fafc7a5dfb75975f1621f} 
+void Text\+::draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_abstract_shape_af20fc4086d1a1a8ac0a9b00f96e4325d}{Abstract\+Shape}}.
+
+\Hypertarget{struct_text_ad789c5524178dd067b713a375a10ff8c}\index{Text@{Text}!getKey@{getKey}}
+\index{getKey@{getKey}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily \label{struct_text_ad789c5524178dd067b713a375a10ff8c} 
+std\+::string Text\+::get\+Key (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_abstract_shape_a013617eed8ff9425556bcc5e933471d2}{Abstract\+Shape}}.
+
+\Hypertarget{struct_text_a799085b9549398763886b61d75e8f3e8}\index{Text@{Text}!parse@{parse}}
+\index{parse@{parse}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_text_a799085b9549398763886b61d75e8f3e8} 
+bool Text\+::parse (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{source}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_abstract_shape_ada434e025715d33500df240c1df91a8f}{Abstract\+Shape}}.
+
+\Hypertarget{struct_text_a92e0b62a535978273a057a5e9077319b}\index{Text@{Text}!serialize@{serialize}}
+\index{serialize@{serialize}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily \label{struct_text_a92e0b62a535978273a057a5e9077319b} 
+std\+::string Text\+::serialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_abstract_shape_afd068b850dcf743749ec2fdf9f69ed4f}{Abstract\+Shape}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shapes_8h}{shapes.\+h}}\end{DoxyCompactItemize}

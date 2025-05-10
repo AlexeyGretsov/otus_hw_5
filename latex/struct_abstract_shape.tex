@@ -1,0 +1,104 @@
+\doxysection{Abstract\+Shape Class Reference}
+\hypertarget{struct_abstract_shape}{}\label{struct_abstract_shape}\index{AbstractShape@{AbstractShape}}
+
+
+Shapes interface class.  
+
+
+
+
+{\ttfamily \#include $<$shapes.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Shape\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_abstract_shape__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Abstract\+Shape\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{struct_abstract_shape__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_abstract_shape_afec2c50f04464edef196d383993445aa}{\texorpdfstring{$\sim$}{\string~}\+Abstract\+Shape}} ()=default
+\item 
+virtual void \mbox{\hyperlink{struct_abstract_shape_af20fc4086d1a1a8ac0a9b00f96e4325d}{draw}} ()=0
+\item 
+virtual std\+::string \mbox{\hyperlink{struct_abstract_shape_a013617eed8ff9425556bcc5e933471d2}{get\+Key}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{struct_abstract_shape_afd068b850dcf743749ec2fdf9f69ed4f}{serialize}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{struct_abstract_shape_ada434e025715d33500df240c1df91a8f}{parse}} (std\+::string\+\_\+view source)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Shapes interface class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_abstract_shape_afec2c50f04464edef196d383993445aa}\index{AbstractShape@{AbstractShape}!````~AbstractShape@{\texorpdfstring{$\sim$}{\string~}AbstractShape}}
+\index{````~AbstractShape@{\texorpdfstring{$\sim$}{\string~}AbstractShape}!AbstractShape@{AbstractShape}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AbstractShape()}{\string~AbstractShape()}}
+{\footnotesize\ttfamily \label{struct_abstract_shape_afec2c50f04464edef196d383993445aa} 
+virtual Abstract\+Shape\+::\texorpdfstring{$\sim$}{\string~}\+Abstract\+Shape (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_abstract_shape_af20fc4086d1a1a8ac0a9b00f96e4325d}\index{AbstractShape@{AbstractShape}!draw@{draw}}
+\index{draw@{draw}!AbstractShape@{AbstractShape}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{struct_abstract_shape_af20fc4086d1a1a8ac0a9b00f96e4325d} 
+virtual void Abstract\+Shape\+::draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{struct_elliple_a3f32dcd2feeeef1fe5ad6652af34c2bd}{Elliple}}, \mbox{\hyperlink{struct_image_af67dbed0b509945e278bdd88088615cf}{Image}}, \mbox{\hyperlink{struct_line_a5bdc984dd5bff20c9fff8e7cf1dfbe1d}{Line}}, \mbox{\hyperlink{struct_point_a073a3972ba583b371134e0040423c334}{Point}}, \mbox{\hyperlink{struct_rect_a2debfd31d29c2370051a318ce350ff9f}{Rect}}, and \mbox{\hyperlink{struct_text_a8f486a54a21fafc7a5dfb75975f1621f}{Text}}.
+
+\Hypertarget{struct_abstract_shape_a013617eed8ff9425556bcc5e933471d2}\index{AbstractShape@{AbstractShape}!getKey@{getKey}}
+\index{getKey@{getKey}!AbstractShape@{AbstractShape}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily \label{struct_abstract_shape_a013617eed8ff9425556bcc5e933471d2} 
+virtual std\+::string Abstract\+Shape\+::get\+Key (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{struct_elliple_a24fc493964a4a40258996d01e5a1c109}{Elliple}}, \mbox{\hyperlink{struct_image_ae9416799a88f732da78ce3a519a9f31b}{Image}}, \mbox{\hyperlink{struct_line_a0f1151866507f891ed572564ece152e1}{Line}}, \mbox{\hyperlink{struct_point_a5512a905f4f35246ff09082bf2b8914e}{Point}}, \mbox{\hyperlink{struct_rect_a2d1839b2529b240e278a0e05776dfcc0}{Rect}}, and \mbox{\hyperlink{struct_text_ad789c5524178dd067b713a375a10ff8c}{Text}}.
+
+\Hypertarget{struct_abstract_shape_ada434e025715d33500df240c1df91a8f}\index{AbstractShape@{AbstractShape}!parse@{parse}}
+\index{parse@{parse}!AbstractShape@{AbstractShape}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_abstract_shape_ada434e025715d33500df240c1df91a8f} 
+virtual bool Abstract\+Shape\+::parse (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{source}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{struct_elliple_abf22fb0ece8c3031bb3b3e19fe15f2cf}{Elliple}}, \mbox{\hyperlink{struct_image_af6860bd1b3e817a8f83ddc83712a37e9}{Image}}, \mbox{\hyperlink{struct_line_a863f7f10b75a2a202b7157d848b9b874}{Line}}, \mbox{\hyperlink{struct_point_ae26fda25ae611be5ced41b28c9031530}{Point}}, \mbox{\hyperlink{struct_rect_a869e1ee975e59241ddb7d034728398ce}{Rect}}, and \mbox{\hyperlink{struct_text_a799085b9549398763886b61d75e8f3e8}{Text}}.
+
+\Hypertarget{struct_abstract_shape_afd068b850dcf743749ec2fdf9f69ed4f}\index{AbstractShape@{AbstractShape}!serialize@{serialize}}
+\index{serialize@{serialize}!AbstractShape@{AbstractShape}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily \label{struct_abstract_shape_afd068b850dcf743749ec2fdf9f69ed4f} 
+virtual std\+::string Abstract\+Shape\+::serialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{struct_elliple_ad87b17e026568e07eaca4258b1e662f8}{Elliple}}, \mbox{\hyperlink{struct_image_a5d9a34628da3e45ad9f452dd67978f22}{Image}}, \mbox{\hyperlink{struct_line_a67f9f0703a038896fd6f20ab37e0d2ff}{Line}}, \mbox{\hyperlink{struct_point_a6ee1ee91d06e2030ebfe66e2d8f38de8}{Point}}, \mbox{\hyperlink{struct_rect_a0c411459067b060c9e97ceea148a7d8a}{Rect}}, and \mbox{\hyperlink{struct_text_a92e0b62a535978273a057a5e9077319b}{Text}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shapes_8h}{shapes.\+h}}\end{DoxyCompactItemize}

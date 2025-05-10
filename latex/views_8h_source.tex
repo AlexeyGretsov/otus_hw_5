@@ -1,0 +1,32 @@
+\doxysection{views.\+h}
+\hypertarget{views_8h_source}{}\label{views_8h_source}\mbox{\hyperlink{views_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{shapes_8h}{shapes.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_abstract_view}{AbstractView}}\ \{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_abstract_view_a8d9cd7833a424d9bcf6df34108438171}{\string~AbstractView}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{struct_abstract_view_a3eccc793684ccc2b954f28c10a5da9d2}{draw}}(\textcolor{keyword}{const}\ std::vector<std::unique\_ptr<AbstractShape>>\ \&shapes)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_print_view}{PrintView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_abstract_view}{AbstractView}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_print_view_a05b8f99953728ed5b448186d6f007280}{draw}}(\textcolor{keyword}{const}\ std::vector<std::unique\_ptr<AbstractShape>>\ \&shapes)\textcolor{keyword}{}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{\ \ \ \ \ \ const\ override\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[Draw\ shapes\ start]\(\backslash\)n"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&shape\ :\ shapes)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ >\ "{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ shape-\/>draw();}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[Draw\ shapes\ finish]\(\backslash\)n"{}};}
+\DoxyCodeLine{00029\ \ \ \}}
+\DoxyCodeLine{00030\ \};}
+
+\end{DoxyCode}

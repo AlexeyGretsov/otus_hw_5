@@ -1,0 +1,138 @@
+\doxysection{shapes.\+h}
+\hypertarget{shapes_8h_source}{}\label{shapes_8h_source}\mbox{\hyperlink{shapes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_abstract_shape}{AbstractShape}}\ \{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_abstract_shape_afec2c50f04464edef196d383993445aa}{\string~AbstractShape}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_abstract_shape_af20fc4086d1a1a8ac0a9b00f96e4325d}{draw}}()\ =\ 0;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{struct_abstract_shape_a013617eed8ff9425556bcc5e933471d2}{getKey}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{struct_abstract_shape_afd068b850dcf743749ec2fdf9f69ed4f}{serialize}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_abstract_shape_ada434e025715d33500df240c1df91a8f}{parse}}(std::string\_view\ source)\ =\ 0;}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_point}{Point}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_abstract_shape}{AbstractShape}}\ \{}
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_point_a073a3972ba583b371134e0040423c334}{draw}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}Draw\ point\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00025\ \ \ std::string\ \mbox{\hyperlink{struct_point_a5512a905f4f35246ff09082bf2b8914e}{getKey}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}[Point]"{}};\ \}}
+\DoxyCodeLine{00026\ \ \ std::string\ \mbox{\hyperlink{struct_point_a6ee1ee91d06e2030ebfe66e2d8f38de8}{serialize}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_point_a5512a905f4f35246ff09082bf2b8914e}{getKey}}();\ \}}
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_point_ae26fda25ae611be5ced41b28c9031530}{parse}}(std::string\_view\ source)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (source.find(\mbox{\hyperlink{struct_point_a5512a905f4f35246ff09082bf2b8914e}{getKey}}(),\ 0)\ ==\ 0)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{comment}{//\ Parce\ other\ parameters}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \}}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_line}{Line}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_abstract_shape}{AbstractShape}}\ \{}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_line_a5bdc984dd5bff20c9fff8e7cf1dfbe1d}{draw}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}Draw\ line\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00042\ \ \ std::string\ \mbox{\hyperlink{struct_line_a0f1151866507f891ed572564ece152e1}{getKey}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}[Line]"{}};\ \}}
+\DoxyCodeLine{00043\ \ \ std::string\ \mbox{\hyperlink{struct_line_a67f9f0703a038896fd6f20ab37e0d2ff}{serialize}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_line_a0f1151866507f891ed572564ece152e1}{getKey}}();\ \}}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_line_a863f7f10b75a2a202b7157d848b9b874}{parse}}(std::string\_view\ source)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (source.find(\mbox{\hyperlink{struct_line_a0f1151866507f891ed572564ece152e1}{getKey}}(),\ 0)\ ==\ 0)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{comment}{//\ Parce\ other\ parameters}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00051\ \ \ \}}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_rect}{Rect}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_abstract_shape}{AbstractShape}}\ \{}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_rect_a2debfd31d29c2370051a318ce350ff9f}{draw}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}Draw\ rect\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00059\ \ \ std::string\ \mbox{\hyperlink{struct_rect_a2d1839b2529b240e278a0e05776dfcc0}{getKey}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}[Rect]"{}};\ \}}
+\DoxyCodeLine{00060\ \ \ std::string\ \mbox{\hyperlink{struct_rect_a0c411459067b060c9e97ceea148a7d8a}{serialize}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_rect_a2d1839b2529b240e278a0e05776dfcc0}{getKey}}();\ \}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_rect_a869e1ee975e59241ddb7d034728398ce}{parse}}(std::string\_view\ source)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (source.find(\mbox{\hyperlink{struct_rect_a2d1839b2529b240e278a0e05776dfcc0}{getKey}}(),\ 0)\ ==\ 0)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{comment}{//\ Parce\ other\ parameters}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00068\ \ \ \}}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_elliple}{Elliple}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_abstract_shape}{AbstractShape}}\ \{}
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_elliple_a3f32dcd2feeeef1fe5ad6652af34c2bd}{draw}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}Draw\ ellipse\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00076\ \ \ std::string\ \mbox{\hyperlink{struct_elliple_a24fc493964a4a40258996d01e5a1c109}{getKey}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}[Elliple]"{}};\ \}}
+\DoxyCodeLine{00077\ \ \ std::string\ \mbox{\hyperlink{struct_elliple_ad87b17e026568e07eaca4258b1e662f8}{serialize}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_elliple_a24fc493964a4a40258996d01e5a1c109}{getKey}}();\ \}}
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_elliple_abf22fb0ece8c3031bb3b3e19fe15f2cf}{parse}}(std::string\_view\ source)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (source.find(\mbox{\hyperlink{struct_elliple_a24fc493964a4a40258996d01e5a1c109}{getKey}}(),\ 0)\ ==\ 0)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \textcolor{comment}{//\ Parce\ other\ parameters}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00085\ \ \ \}}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_text_ab3e26143fccc52699bcc5149cae852bc}{Text}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_abstract_shape}{AbstractShape}}\ \{}
+\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{struct_text_ab3e26143fccc52699bcc5149cae852bc}{Text}}()\ \{\}}
+\DoxyCodeLine{00093\ \ \ \mbox{\hyperlink{struct_text_aa45a27f780dda907a9086bac8744c0c7}{Text}}(std::string\_view\ text)\ :\ text(text)\ \{\}}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_text_a8f486a54a21fafc7a5dfb75975f1621f}{draw}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}Draw\ text:\ '"{}}\ <<\ text\ <<\ \textcolor{stringliteral}{"{}'\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00095\ \ \ std::string\ \mbox{\hyperlink{struct_text_ad789c5524178dd067b713a375a10ff8c}{getKey}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}[Text]"{}};\ \}}
+\DoxyCodeLine{00096\ \ \ std::string\ \mbox{\hyperlink{struct_text_a92e0b62a535978273a057a5e9077319b}{serialize}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_text_ad789c5524178dd067b713a375a10ff8c}{getKey}}()\ +\ text;\ \}}
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_text_a799085b9549398763886b61d75e8f3e8}{parse}}(std::string\_view\ source)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{if}\ (source.find(\mbox{\hyperlink{struct_text_ad789c5524178dd067b713a375a10ff8c}{getKey}}(),\ 0)\ ==\ 0)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ text\ =\ source.substr(std::size(\mbox{\hyperlink{struct_text_ad789c5524178dd067b713a375a10ff8c}{getKey}}()));}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00104\ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00107\ \ \ std::string\ text;}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_image}{Image}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_abstract_shape}{AbstractShape}}\ \{}
+\DoxyCodeLine{00114\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_image_af67dbed0b509945e278bdd88088615cf}{draw}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}Draw\ image\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00115\ \ \ std::string\ \mbox{\hyperlink{struct_image_ae9416799a88f732da78ce3a519a9f31b}{getKey}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}[Image]"{}};\ \}}
+\DoxyCodeLine{00116\ \ \ std::string\ \mbox{\hyperlink{struct_image_a5d9a34628da3e45ad9f452dd67978f22}{serialize}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_image_ae9416799a88f732da78ce3a519a9f31b}{getKey}}();\ \}}
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_image_af6860bd1b3e817a8f83ddc83712a37e9}{parse}}(std::string\_view\ source)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (source.find(\mbox{\hyperlink{struct_image_ae9416799a88f732da78ce3a519a9f31b}{getKey}}(),\ 0)\ ==\ 0)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \textcolor{comment}{//\ Parce\ other\ parameters}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00124\ \ \ \}}
+\DoxyCodeLine{00125\ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ std::unique\_ptr<AbstractShape>\ \mbox{\hyperlink{shapes_8h_afcc6064e95629e7e07f01b1e919ebb9d}{createShape}}(std::string\_view\ source)\ \{}
+\DoxyCodeLine{00128\ \ \ \textcolor{keyword}{auto}\ isShape\ =\ [=](std::string\_view\ key)\ -\/>\ \textcolor{keywordtype}{bool}\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordflow}{return}\ source.find(key,\ 0)\ ==\ 0;}
+\DoxyCodeLine{00130\ \ \ \};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ std::unique\_ptr<AbstractShape>\ result;}
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordflow}{if}\ (isShape(\mbox{\hyperlink{struct_point}{Point}}\{\}.\mbox{\hyperlink{struct_point_a5512a905f4f35246ff09082bf2b8914e}{getKey}}()))\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ result.reset(\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_point}{Point}}\{\});}
+\DoxyCodeLine{00135\ \ \ \ \ result-\/>parse(source);}
+\DoxyCodeLine{00136\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (isShape(\mbox{\hyperlink{struct_line}{Line}}\{\}.\mbox{\hyperlink{struct_line_a0f1151866507f891ed572564ece152e1}{getKey}}()))\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ result.reset(\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_line}{Line}}\{\});}
+\DoxyCodeLine{00138\ \ \ \ \ result-\/>parse(source);}
+\DoxyCodeLine{00139\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (isShape(\mbox{\hyperlink{struct_rect}{Rect}}\{\}.\mbox{\hyperlink{struct_rect_a2d1839b2529b240e278a0e05776dfcc0}{getKey}}()))\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ result.reset(\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_rect}{Rect}}\{\});}
+\DoxyCodeLine{00141\ \ \ \ \ result-\/>parse(source);}
+\DoxyCodeLine{00142\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (isShape(\mbox{\hyperlink{struct_elliple}{Elliple}}\{\}.\mbox{\hyperlink{struct_elliple_a24fc493964a4a40258996d01e5a1c109}{getKey}}()))\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ result.reset(\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_elliple}{Elliple}}\{\});}
+\DoxyCodeLine{00144\ \ \ \ \ result-\/>parse(source);}
+\DoxyCodeLine{00145\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (isShape(\mbox{\hyperlink{struct_text}{Text}}\{\}.\mbox{\hyperlink{struct_text_ad789c5524178dd067b713a375a10ff8c}{getKey}}()))\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ result.reset(\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_text}{Text}}\{\});}
+\DoxyCodeLine{00147\ \ \ \ \ result-\/>parse(source);}
+\DoxyCodeLine{00148\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (isShape(\mbox{\hyperlink{struct_image}{Image}}\{\}.\mbox{\hyperlink{struct_image_ae9416799a88f732da78ce3a519a9f31b}{getKey}}()))\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ result.reset(\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_image}{Image}}\{\});}
+\DoxyCodeLine{00150\ \ \ \ \ result-\/>parse(source);}
+\DoxyCodeLine{00151\ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{keywordflow}{return}\ std::move(result);}
+\DoxyCodeLine{00154\ \}}
+
+\end{DoxyCode}

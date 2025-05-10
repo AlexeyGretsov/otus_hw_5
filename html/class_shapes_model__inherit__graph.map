@@ -1,0 +1,5 @@
+<map id="ShapesModel" name="ShapesModel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,221,123,369"/>
+<area shape="rect" id="Node000002" href="$struct_abstract_model.html" title="Models interface class." alt="" coords="5,5,129,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,188,70,222,65,222,65,188"/>
+</map>

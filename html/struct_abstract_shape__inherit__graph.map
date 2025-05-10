@@ -1,0 +1,15 @@
+<map id="AbstractShape" name="AbstractShape">
+<area shape="rect" id="Node000001" title="Shapes interface class." alt="" coords="242,5,368,153"/>
+<area shape="rect" id="Node000002" href="$struct_elliple.html" title="Elliple shape class." alt="" coords="5,221,85,349"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,116,163,153,130,177,99,203,82,223,78,220,95,199,127,173,160,149,228,111"/>
+<area shape="rect" id="Node000003" href="$struct_image.html" title="Image shape class." alt="" coords="109,221,189,349"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,163,203,203,189,223,185,220,199,199,230,160"/>
+<area shape="rect" id="Node000004" href="$struct_line.html" title="Line shape class." alt="" coords="213,221,293,349"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="286,168,272,222,267,221,281,167"/>
+<area shape="rect" id="Node000005" href="$struct_point.html" title="Point shape class." alt="" coords="317,221,397,349"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="330,167,344,221,339,222,325,168"/>
+<area shape="rect" id="Node000006" href="$struct_rect.html" title="Rect shape class." alt="" coords="421,221,501,349"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="380,160,411,199,426,220,422,223,407,203,376,163"/>
+<area shape="rect" id="Node000007" href="$struct_text.html" title="Text shape class." alt="" coords="525,201,605,369"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="383,111,450,149,484,173,515,199,528,213,524,216,511,203,481,177,447,153,380,116"/>
+</map>
