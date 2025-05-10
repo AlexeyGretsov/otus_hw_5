@@ -11,6 +11,7 @@ add_executable(${CMAKE_PROJECT_NAME}
     shapes.h
     models.h
     views.h
+    controllers.h
     main.cpp
 )
 

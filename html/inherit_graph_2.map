@@ -1,5 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_abstract_view.html" title=" " alt="" coords="5,5,105,31"/>
-<area shape="rect" id="Node000001" href="$class_print_view.html" title=" " alt="" coords="153,5,230,31"/>
-<area shape="poly" id="edge8_Node000000_Node000001" title=" " alt="" coords="120,16,152,16,152,21,120,21"/>
+<area shape="rect" id="Node000000" href="$struct_abstract_shape.html" title="Shapes interface class." alt="" coords="5,129,113,155"/>
+<area shape="rect" id="Node000001" href="$struct_elliple.html" title="Elliple shape class." alt="" coords="161,5,218,31"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="82,116,159,40,171,29,175,33,162,44,86,120"/>
+<area shape="rect" id="Node000002" href="$struct_image.html" title="Image shape class." alt="" coords="161,55,218,80"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="95,119,164,79,166,83,97,124"/>
+<area shape="rect" id="Node000003" href="$struct_line.html" title="Line shape class." alt="" coords="167,104,212,130"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="128,126,166,119,167,124,129,131"/>
+<area shape="rect" id="Node000004" href="$struct_point.html" title="Point shape class." alt="" coords="164,153,215,179"/>
+<area shape="poly" id="edge6_Node000000_Node000004" title=" " alt="" coords="128,152,164,159,163,164,127,157"/>
+<area shape="rect" id="Node000005" href="$struct_rect.html" title="Rect shape class." alt="" coords="165,203,214,228"/>
+<area shape="poly" id="edge7_Node000000_Node000005" title=" " alt="" coords="98,161,166,200,163,204,95,165"/>
+<area shape="rect" id="Node000006" href="$struct_text.html" title="Text shape class." alt="" coords="166,252,212,278"/>
+<area shape="poly" id="edge8_Node000000_Node000006" title=" " alt="" coords="86,164,162,239,175,250,171,254,159,243,82,168"/>
 </map>

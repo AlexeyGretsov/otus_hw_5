@@ -2,36 +2,47 @@
 
 #include "models.h"
 #include "views.h"
+#include "controllers.h"
 
 int main(int argc, char *argv[]) {
-  ShapesModel model;
-  PrintView view;
+  {
+    ShapesModel model;
+    PrintView view;
 
-  model.addShape(std::unique_ptr<AbstractShape>(new Point()));
-  model.addShape(std::unique_ptr<AbstractShape>(new Line()));
-  model.addShape(std::unique_ptr<AbstractShape>(new Rect()));
-  model.addShape(std::unique_ptr<AbstractShape>(new Elliple()));
-  model.addShape(std::unique_ptr<AbstractShape>(new Text("Hello!")));
-  model.addShape(std::unique_ptr<AbstractShape>(new Image()));
+    model.addShape(std::unique_ptr<AbstractShape>(new Point()));
+    model.addShape(std::unique_ptr<AbstractShape>(new Line()));
+    model.addShape(std::unique_ptr<AbstractShape>(new Rect()));
+    model.addShape(std::unique_ptr<AbstractShape>(new Elliple()));
+    model.addShape(std::unique_ptr<AbstractShape>(new Text("Hello!")));
+    model.addShape(std::unique_ptr<AbstractShape>(new Image()));
 
-  view.draw(model.getShapes());
+    view.draw(model.getShapes());
 
-  auto data = model.serialize();
-  std::cout << data << std::endl;
+    auto data = model.serialize();
+    std::cout << data << std::endl;
 
-  if (not model.parse(data)) {
-    std::cerr << "Failed to parse data";
+    if (not model.parse(data)) {
+      std::cerr << "Failed to parse data";
+    }
+
+    model.addShape(std::unique_ptr<AbstractShape>(new Text("OTUS")));
+    model.addShape(std::unique_ptr<AbstractShape>(new Text("C++")));
+    model.addShape(std::unique_ptr<AbstractShape>(new Text("Professional")));
+
+    view.draw(model.getShapes());
+
+    std::cout << "Data after parse" << std::endl;
+    data = model.serialize();
+    std::cout << data << std::endl;
   }
 
-  model.addShape(std::unique_ptr<AbstractShape>(new Text("OTUS")));
-  model.addShape(std::unique_ptr<AbstractShape>(new Text("C++")));
-  model.addShape(std::unique_ptr<AbstractShape>(new Text("Professional")));
+  std::unique_ptr<AbstractModel> model(new ShapesModel);
+  std::unique_ptr<AbstractView> view(new PrintView);
 
-  view.draw(model.getShapes());
-
-  std::cout << "Data after parse" << std::endl;
-  data = model.serialize();
-  std::cout << data << std::endl;
+  std::unique_ptr<AbstractController> controller(
+      new KeyboardController(std::move(model), std::move(view)));
+  
+  controller->start();
 
   return 0;
 }

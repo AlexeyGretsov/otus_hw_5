@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['line_0',['Line',['../struct_line.html',1,'']]]
+  ['keyboardcontroller_0',['KeyboardController',['../class_keyboard_controller.html',1,'KeyboardController'],['../class_keyboard_controller.html#a0508ac1782bb6ee6f4455fb6095dd437',1,'KeyboardController::KeyboardController()']]]
 ];

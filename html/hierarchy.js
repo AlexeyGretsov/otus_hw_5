@@ -1,5 +1,8 @@
 var hierarchy =
 [
+    [ "AbstractController", "struct_abstract_controller.html", [
+      [ "KeyboardController", "class_keyboard_controller.html", null ]
+    ] ],
     [ "AbstractModel", "struct_abstract_model.html", [
       [ "ShapesModel", "class_shapes_model.html", null ]
     ] ],
@@ -14,5 +17,6 @@ var hierarchy =
     [ "AbstractView", "struct_abstract_view.html", [
       [ "PrintView", "class_print_view.html", null ]
     ] ],
+    [ "Action", "struct_action.html", null ],
     [ "struct", "classstruct.html", null ]
 ];
