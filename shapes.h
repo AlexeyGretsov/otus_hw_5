@@ -89,17 +89,22 @@ struct Elliple : public AbstractShape {
  *  @brief Text shape class
  */
 struct Text : public AbstractShape {
-  void draw() override { std::cout << "Draw text\n"; }
+  Text() {}
+  Text(std::string_view text) : text(text) {}
+  void draw() override { std::cout << "Draw text: '" << text << "'\n"; }
   std::string getKey() const override { return "[Text]"; }
-  std::string serialize() const override { return getKey(); }
+  std::string serialize() const override { return getKey() + text; }
   bool parse(std::string_view source) override {
     if (source.find(getKey(), 0) == 0) {
-      // Parce other parameters
+      text = source.substr(std::size(getKey()));
       return true;
     }
 
     return false;
   }
+
+private:
+  std::string text;
 };
 
 /** @class Image
