@@ -1,8 +1,8 @@
 #include <iostream>
 
+#include "controllers.h"
 #include "models.h"
 #include "views.h"
-#include "controllers.h"
 
 int main(int argc, char *argv[]) {
   {
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
 
   std::unique_ptr<AbstractController> controller(
       new KeyboardController(std::move(model), std::move(view)));
-  
+
   controller->start();
 
   return 0;
