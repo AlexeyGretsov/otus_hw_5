@@ -8,6 +8,8 @@ enable_testing()
 find_package(GTest REQUIRED)
 
 add_executable(${CMAKE_PROJECT_NAME} 
+    shapes.h
+    models.h
     main.cpp
 )
 
