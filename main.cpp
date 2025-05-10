@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[]) {
   ShapesModel model;
-  
+
   model.addShape(std::unique_ptr<AbstractShape>(new Point()));
   model.addShape(std::unique_ptr<AbstractShape>(new Line()));
   model.addShape(std::unique_ptr<AbstractShape>(new Rect()));
@@ -15,8 +15,7 @@ int main(int argc, char *argv[]) {
   auto data = model.serialize();
   std::cout << data << std::endl;
 
-  if (not model.parse(data))
-  {
+  if (not model.parse(data)) {
     std::cerr << "Failed to parse data";
   }
 
