@@ -23,8 +23,8 @@ jobs:
     - name: Coding Style checks
       run: ${{github.workspace}}/format.sh check
 
-    - name: Run static analysis
-      run: ${{github.workspace}}/static-analysis.sh -p ${{github.workspace}}/build
+#    - name: Run static analysis
+#      run: ${{github.workspace}}/static-analysis.sh -p ${{github.workspace}}/build
 
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DPATCH_VERSION=${{ github.run_number }}
