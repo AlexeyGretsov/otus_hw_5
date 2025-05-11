@@ -6,20 +6,22 @@
 
 
 
-Inheritance diagram for Shapes\+Model\+:\nopagebreak
+Inheritance diagram for Shapes\+Model\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=173pt]{class_shapes_model__inherit__graph}
+\includegraphics[width=183pt]{class_shapes_model__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Shapes\+Model\+:\nopagebreak
+Collaboration diagram for Shapes\+Model\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=173pt]{class_shapes_model__coll__graph}
+\includegraphics[width=183pt]{class_shapes_model__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -27,7 +29,9 @@ Collaboration diagram for Shapes\+Model\+:\nopagebreak
 \item 
 void \mbox{\hyperlink{class_shapes_model_a58a852ae66a4833d27eeb8b0b8898c05}{add\+Shape}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_abstract_shape}{Abstract\+Shape}} $>$ shape) override
 \item 
-void \mbox{\hyperlink{class_shapes_model_a118a0ced09150264168270a96a9cd9d7}{remove\+Shape}} (size\+\_\+t index) override
+void \mbox{\hyperlink{class_shapes_model_acf8c2897e20d39dca09b40f05c5fe9b4}{remove\+Last\+Shape}} () override
+\item 
+void \mbox{\hyperlink{class_shapes_model_ae096a63842e59b56a769e0faa7ab52ad}{reset}} () override
 \item 
 const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_abstract_shape}{Abstract\+Shape}} $>$ $>$ \& \mbox{\hyperlink{class_shapes_model_abeb8948c123247063fb30f7a23117c40}{get\+Shapes}} () const override
 \item 
@@ -73,15 +77,25 @@ bool Shapes\+Model\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string 
 
 Implements \mbox{\hyperlink{struct_abstract_model_ad42cb2b26fcd2335c16854728dac8c0e}{Abstract\+Model}}.
 
-\Hypertarget{class_shapes_model_a118a0ced09150264168270a96a9cd9d7}\index{ShapesModel@{ShapesModel}!removeShape@{removeShape}}
-\index{removeShape@{removeShape}!ShapesModel@{ShapesModel}}
-\doxysubsubsection{\texorpdfstring{removeShape()}{removeShape()}}
-{\footnotesize\ttfamily \label{class_shapes_model_a118a0ced09150264168270a96a9cd9d7} 
-void Shapes\+Model\+::remove\+Shape (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+\Hypertarget{class_shapes_model_acf8c2897e20d39dca09b40f05c5fe9b4}\index{ShapesModel@{ShapesModel}!removeLastShape@{removeLastShape}}
+\index{removeLastShape@{removeLastShape}!ShapesModel@{ShapesModel}}
+\doxysubsubsection{\texorpdfstring{removeLastShape()}{removeLastShape()}}
+{\footnotesize\ttfamily \label{class_shapes_model_acf8c2897e20d39dca09b40f05c5fe9b4} 
+void Shapes\+Model\+::remove\+Last\+Shape (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{struct_abstract_model_a5134a3bece9ff64cb80bf5ed7b652412}{Abstract\+Model}}.
+Implements \mbox{\hyperlink{struct_abstract_model_a6ebeb6720abb03d02c89967c441d4aab}{Abstract\+Model}}.
+
+\Hypertarget{class_shapes_model_ae096a63842e59b56a769e0faa7ab52ad}\index{ShapesModel@{ShapesModel}!reset@{reset}}
+\index{reset@{reset}!ShapesModel@{ShapesModel}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \label{class_shapes_model_ae096a63842e59b56a769e0faa7ab52ad} 
+void Shapes\+Model\+::reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_abstract_model_ad5feffbfb5b091967f5f28c53c50d885}{Abstract\+Model}}.
 
 \Hypertarget{class_shapes_model_aa5dd8ae91bc81688c7252f03234d295f}\index{ShapesModel@{ShapesModel}!serialize@{serialize}}
 \index{serialize@{serialize}!ShapesModel@{ShapesModel}}

@@ -11,20 +11,22 @@ Models interface class.
 
 
 
-Inheritance diagram for Abstract\+Model\+:\nopagebreak
+Inheritance diagram for Abstract\+Model\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=173pt]{struct_abstract_model__inherit__graph}
+\includegraphics[width=183pt]{struct_abstract_model__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Abstract\+Model\+:\nopagebreak
+Collaboration diagram for Abstract\+Model\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=173pt]{struct_abstract_model__coll__graph}
+\includegraphics[width=183pt]{struct_abstract_model__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -34,7 +36,9 @@ virtual \mbox{\hyperlink{struct_abstract_model_a70c0c5f53c7edb56bf68838d46de366b
 \item 
 virtual void \mbox{\hyperlink{struct_abstract_model_ace04838f3197afbbb47410f8105bb345}{add\+Shape}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_abstract_shape}{Abstract\+Shape}} $>$ shape)=0
 \item 
-virtual void \mbox{\hyperlink{struct_abstract_model_a5134a3bece9ff64cb80bf5ed7b652412}{remove\+Shape}} (size\+\_\+t index)=0
+virtual void \mbox{\hyperlink{struct_abstract_model_a6ebeb6720abb03d02c89967c441d4aab}{remove\+Last\+Shape}} ()=0
+\item 
+virtual void \mbox{\hyperlink{struct_abstract_model_ad5feffbfb5b091967f5f28c53c50d885}{reset}} ()=0
 \item 
 virtual const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_abstract_shape}{Abstract\+Shape}} $>$ $>$ \& \mbox{\hyperlink{struct_abstract_model_a75b8737154226c3efb892f0c0f5e274a}{get\+Shapes}} () const =0
 \item 
@@ -87,15 +91,25 @@ virtual bool Abstract\+Model\+::parse (\begin{DoxyParamCaption}\item[{const std\
 
 Implemented in \mbox{\hyperlink{class_shapes_model_a900f33877311fa74d5ddd6d8915bc69c}{Shapes\+Model}}.
 
-\Hypertarget{struct_abstract_model_a5134a3bece9ff64cb80bf5ed7b652412}\index{AbstractModel@{AbstractModel}!removeShape@{removeShape}}
-\index{removeShape@{removeShape}!AbstractModel@{AbstractModel}}
-\doxysubsubsection{\texorpdfstring{removeShape()}{removeShape()}}
-{\footnotesize\ttfamily \label{struct_abstract_model_a5134a3bece9ff64cb80bf5ed7b652412} 
-virtual void Abstract\+Model\+::remove\+Shape (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\Hypertarget{struct_abstract_model_a6ebeb6720abb03d02c89967c441d4aab}\index{AbstractModel@{AbstractModel}!removeLastShape@{removeLastShape}}
+\index{removeLastShape@{removeLastShape}!AbstractModel@{AbstractModel}}
+\doxysubsubsection{\texorpdfstring{removeLastShape()}{removeLastShape()}}
+{\footnotesize\ttfamily \label{struct_abstract_model_a6ebeb6720abb03d02c89967c441d4aab} 
+virtual void Abstract\+Model\+::remove\+Last\+Shape (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Implemented in \mbox{\hyperlink{class_shapes_model_a118a0ced09150264168270a96a9cd9d7}{Shapes\+Model}}.
+Implemented in \mbox{\hyperlink{class_shapes_model_acf8c2897e20d39dca09b40f05c5fe9b4}{Shapes\+Model}}.
+
+\Hypertarget{struct_abstract_model_ad5feffbfb5b091967f5f28c53c50d885}\index{AbstractModel@{AbstractModel}!reset@{reset}}
+\index{reset@{reset}!AbstractModel@{AbstractModel}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \label{struct_abstract_model_ad5feffbfb5b091967f5f28c53c50d885} 
+virtual void Abstract\+Model\+::reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_shapes_model_ae096a63842e59b56a769e0faa7ab52ad}{Shapes\+Model}}.
 
 \Hypertarget{struct_abstract_model_a77b0ac3fdeb801f0a8db9a338d93656b}\index{AbstractModel@{AbstractModel}!serialize@{serialize}}
 \index{serialize@{serialize}!AbstractModel@{AbstractModel}}

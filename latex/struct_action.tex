@@ -11,8 +11,7 @@ User action.
 
 
 
-Collaboration diagram for Action\+:
-\nopagebreak
+Collaboration diagram for Action\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,7 +29,15 @@ enum class \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530c}{Typ
 , \newline
 \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530ca5da53d0be0ed3a0977b0079fb01a29bc}{DRAW\+\_\+\+ELLIPSE}}
 , \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530cabb90e7bd18463642cb80b667fa98eda8}{DRAW\+\_\+\+TEXT}}
-, \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530ca41f45713e3cceacd722fb1b34f3cb2ff}{DTAW\+\_\+\+IMAGE}}
+, \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530ca5cb6a362b1dec2b19422e9e9a6bbda3c}{DRAW\+\_\+\+IMAGE}}
+, \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530ca6e7d59fd7f217db0636f682521e58f56}{REMOVE\+\_\+\+LAST\+\_\+\+SHAPE}}
+, \newline
+\mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530ca91eeb1fdd48ffe16f4e7759178401104}{NEW\+\_\+\+DOCUMENT}}
+, \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530cadca818a10aa911542b42764744118296}{SAVE\+\_\+\+TO\+\_\+\+FILE}}
+, \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530ca580b5bcdb2b82a10a2cf780662f39827}{RESTORE\+\_\+\+FROM\+\_\+\+FILE}}
+, \mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530ca000856510488c462ee7720e2c84d5c84}{INVALID\+\_\+\+COMMAND}}
+, \newline
+\mbox{\hyperlink{struct_action_adc6a9d33ee528db78680d8a2497a530ca5dfd352dd6b7a5d118237fcf1e19fcc1}{QUIT}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
@@ -84,8 +91,32 @@ DRAW\+\_\+\+ELLIPSE&\\
 DRAW\+\_\+\+TEXT&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DTAW\_IMAGE@{DTAW\_IMAGE}!Action@{Action}}\index{Action@{Action}!DTAW\_IMAGE@{DTAW\_IMAGE}}}\Hypertarget{struct_action_adc6a9d33ee528db78680d8a2497a530ca41f45713e3cceacd722fb1b34f3cb2ff}\label{struct_action_adc6a9d33ee528db78680d8a2497a530ca41f45713e3cceacd722fb1b34f3cb2ff} 
-DTAW\+\_\+\+IMAGE&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DRAW\_IMAGE@{DRAW\_IMAGE}!Action@{Action}}\index{Action@{Action}!DRAW\_IMAGE@{DRAW\_IMAGE}}}\Hypertarget{struct_action_adc6a9d33ee528db78680d8a2497a530ca5cb6a362b1dec2b19422e9e9a6bbda3c}\label{struct_action_adc6a9d33ee528db78680d8a2497a530ca5cb6a362b1dec2b19422e9e9a6bbda3c} 
+DRAW\+\_\+\+IMAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMOVE\_LAST\_SHAPE@{REMOVE\_LAST\_SHAPE}!Action@{Action}}\index{Action@{Action}!REMOVE\_LAST\_SHAPE@{REMOVE\_LAST\_SHAPE}}}\Hypertarget{struct_action_adc6a9d33ee528db78680d8a2497a530ca6e7d59fd7f217db0636f682521e58f56}\label{struct_action_adc6a9d33ee528db78680d8a2497a530ca6e7d59fd7f217db0636f682521e58f56} 
+REMOVE\+\_\+\+LAST\+\_\+\+SHAPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NEW\_DOCUMENT@{NEW\_DOCUMENT}!Action@{Action}}\index{Action@{Action}!NEW\_DOCUMENT@{NEW\_DOCUMENT}}}\Hypertarget{struct_action_adc6a9d33ee528db78680d8a2497a530ca91eeb1fdd48ffe16f4e7759178401104}\label{struct_action_adc6a9d33ee528db78680d8a2497a530ca91eeb1fdd48ffe16f4e7759178401104} 
+NEW\+\_\+\+DOCUMENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SAVE\_TO\_FILE@{SAVE\_TO\_FILE}!Action@{Action}}\index{Action@{Action}!SAVE\_TO\_FILE@{SAVE\_TO\_FILE}}}\Hypertarget{struct_action_adc6a9d33ee528db78680d8a2497a530cadca818a10aa911542b42764744118296}\label{struct_action_adc6a9d33ee528db78680d8a2497a530cadca818a10aa911542b42764744118296} 
+SAVE\+\_\+\+TO\+\_\+\+FILE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESTORE\_FROM\_FILE@{RESTORE\_FROM\_FILE}!Action@{Action}}\index{Action@{Action}!RESTORE\_FROM\_FILE@{RESTORE\_FROM\_FILE}}}\Hypertarget{struct_action_adc6a9d33ee528db78680d8a2497a530ca580b5bcdb2b82a10a2cf780662f39827}\label{struct_action_adc6a9d33ee528db78680d8a2497a530ca580b5bcdb2b82a10a2cf780662f39827} 
+RESTORE\+\_\+\+FROM\+\_\+\+FILE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVALID\_COMMAND@{INVALID\_COMMAND}!Action@{Action}}\index{Action@{Action}!INVALID\_COMMAND@{INVALID\_COMMAND}}}\Hypertarget{struct_action_adc6a9d33ee528db78680d8a2497a530ca000856510488c462ee7720e2c84d5c84}\label{struct_action_adc6a9d33ee528db78680d8a2497a530ca000856510488c462ee7720e2c84d5c84} 
+INVALID\+\_\+\+COMMAND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUIT@{QUIT}!Action@{Action}}\index{Action@{Action}!QUIT@{QUIT}}}\Hypertarget{struct_action_adc6a9d33ee528db78680d8a2497a530ca5dfd352dd6b7a5d118237fcf1e19fcc1}\label{struct_action_adc6a9d33ee528db78680d8a2497a530ca5dfd352dd6b7a5d118237fcf1e19fcc1} 
+QUIT&\\
 \hline
 
 \end{DoxyEnumFields}

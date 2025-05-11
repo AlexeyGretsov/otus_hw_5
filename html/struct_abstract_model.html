@@ -118,9 +118,9 @@ Inheritance diagram for AbstractModel:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_abstract_model__inherit__graph.png" border="0" usemap="#a_abstract_model_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_abstract_model_inherit__map" id="a_abstract_model_inherit__map">
-<area shape="rect" title="Models interface class." alt="" coords="5,5,129,173"/>
-<area shape="rect" href="class_shapes_model.html" title=" " alt="" coords="11,221,123,369"/>
-<area shape="poly" title=" " alt="" coords="70,188,70,222,65,222,65,188"/>
+<area shape="rect" title="Models interface class." alt="" coords="5,5,142,194"/>
+<area shape="rect" href="class_shapes_model.html" title=" " alt="" coords="5,242,142,410"/>
+<area shape="poly" title=" " alt="" coords="76,208,76,242,71,242,71,208"/>
 </map>
 </div>
 <div class="dynheader">
@@ -128,7 +128,7 @@ Collaboration diagram for AbstractModel:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_abstract_model__coll__graph.png" border="0" usemap="#a_abstract_model_coll__map" alt="Collaboration graph"/></div>
 <map name="a_abstract_model_coll__map" id="a_abstract_model_coll__map">
-<area shape="rect" title="Models interface class." alt="" coords="5,5,129,173"/>
+<area shape="rect" title="Models interface class." alt="" coords="5,5,142,194"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -138,8 +138,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a70c0c5f53c7edb56bf68838d46de366b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace04838f3197afbbb47410f8105bb345" id="r_ace04838f3197afbbb47410f8105bb345"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace04838f3197afbbb47410f8105bb345">addShape</a> (std::unique_ptr&lt; <a class="el" href="struct_abstract_shape.html">AbstractShape</a> &gt; shape)=0</td></tr>
 <tr class="separator:ace04838f3197afbbb47410f8105bb345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5134a3bece9ff64cb80bf5ed7b652412" id="r_a5134a3bece9ff64cb80bf5ed7b652412"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5134a3bece9ff64cb80bf5ed7b652412">removeShape</a> (size_t index)=0</td></tr>
-<tr class="separator:a5134a3bece9ff64cb80bf5ed7b652412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ebeb6720abb03d02c89967c441d4aab" id="r_a6ebeb6720abb03d02c89967c441d4aab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ebeb6720abb03d02c89967c441d4aab">removeLastShape</a> ()=0</td></tr>
+<tr class="separator:a6ebeb6720abb03d02c89967c441d4aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5feffbfb5b091967f5f28c53c50d885" id="r_ad5feffbfb5b091967f5f28c53c50d885"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5feffbfb5b091967f5f28c53c50d885">reset</a> ()=0</td></tr>
+<tr class="separator:ad5feffbfb5b091967f5f28c53c50d885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75b8737154226c3efb892f0c0f5e274a" id="r_a75b8737154226c3efb892f0c0f5e274a"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; std::unique_ptr&lt; <a class="el" href="struct_abstract_shape.html">AbstractShape</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75b8737154226c3efb892f0c0f5e274a">getShapes</a> () const =0</td></tr>
 <tr class="separator:a75b8737154226c3efb892f0c0f5e274a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad42cb2b26fcd2335c16854728dac8c0e" id="r_ad42cb2b26fcd2335c16854728dac8c0e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad42cb2b26fcd2335c16854728dac8c0e">parse</a> (const std::string &amp;source)=0</td></tr>
@@ -257,8 +259,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5134a3bece9ff64cb80bf5ed7b652412" name="a5134a3bece9ff64cb80bf5ed7b652412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5134a3bece9ff64cb80bf5ed7b652412">&#9670;&#160;</a></span>removeShape()</h2>
+<a id="a6ebeb6720abb03d02c89967c441d4aab" name="a6ebeb6720abb03d02c89967c441d4aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ebeb6720abb03d02c89967c441d4aab">&#9670;&#160;</a></span>removeLastShape()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,9 +269,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void AbstractModel::removeShape </td>
+          <td class="memname">virtual void AbstractModel::removeLastShape </td>
           <td>(</td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -280,7 +282,34 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_shapes_model.html#a118a0ced09150264168270a96a9cd9d7">ShapesModel</a>.</p>
+<p>Implemented in <a class="el" href="class_shapes_model.html#acf8c2897e20d39dca09b40f05c5fe9b4">ShapesModel</a>.</p>
+
+</div>
+</div>
+<a id="ad5feffbfb5b091967f5f28c53c50d885" name="ad5feffbfb5b091967f5f28c53c50d885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5feffbfb5b091967f5f28c53c50d885">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AbstractModel::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_shapes_model.html#ae096a63842e59b56a769e0faa7ab52ad">ShapesModel</a>.</p>
 
 </div>
 </div>

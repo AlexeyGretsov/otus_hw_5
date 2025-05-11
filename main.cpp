@@ -5,36 +5,18 @@
 #include "views.h"
 
 int main(int argc, char *argv[]) {
-  {
-    ShapesModel model;
-    PrintView view;
-
-    model.addShape(std::unique_ptr<AbstractShape>(new Point()));
-    model.addShape(std::unique_ptr<AbstractShape>(new Line()));
-    model.addShape(std::unique_ptr<AbstractShape>(new Rect()));
-    model.addShape(std::unique_ptr<AbstractShape>(new Elliple()));
-    model.addShape(std::unique_ptr<AbstractShape>(new Text("Hello!")));
-    model.addShape(std::unique_ptr<AbstractShape>(new Image()));
-
-    view.draw(model.getShapes());
-
-    auto data = model.serialize();
-    std::cout << data << std::endl;
-
-    if (not model.parse(data)) {
-      std::cerr << "Failed to parse data";
-    }
-
-    model.addShape(std::unique_ptr<AbstractShape>(new Text("OTUS")));
-    model.addShape(std::unique_ptr<AbstractShape>(new Text("C++")));
-    model.addShape(std::unique_ptr<AbstractShape>(new Text("Professional")));
-
-    view.draw(model.getShapes());
-
-    std::cout << "Data after parse" << std::endl;
-    data = model.serialize();
-    std::cout << data << std::endl;
-  }
+  std::cout << "Commands:\n";
+  std::cout << " - 'p' – draw point\n";
+  std::cout << " - 'l' – draw line\n";
+  std::cout << " - 'r' – draw rect\n";
+  std::cout << " - 'e' – draw ellipse\n";
+  std::cout << " - 't'[<space><any text>] – draw text\n";
+  std::cout << " - 'i' – draw image\n";
+  std::cout << " - 'rem' – remove last shape\n";
+  std::cout << " - 'n' – create new document\n";
+  std::cout << " - 'save'<space>'filename' - save to file\n";
+  std::cout << " - 'restore'<space>'filename' - restore from file\n";
+  std::cout << " - 'q' for quit\n";
 
   std::unique_ptr<AbstractModel> model(new ShapesModel);
   std::unique_ptr<AbstractView> view(new PrintView);

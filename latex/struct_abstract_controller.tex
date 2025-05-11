@@ -37,6 +37,10 @@ virtual \mbox{\hyperlink{struct_abstract_controller_a0c02f7dafe54c59bf88a0a0ad00
 virtual void \mbox{\hyperlink{struct_abstract_controller_a25475dd8429d7443ccc78f778efc59d1}{start}} ()=0
 \item 
 virtual \mbox{\hyperlink{struct_action}{Action}} \mbox{\hyperlink{struct_abstract_controller_ad7576472ad9f71a4721d3cebd35f5333}{wait\+Action}} ()=0
+\item 
+virtual void \mbox{\hyperlink{struct_abstract_controller_a0b1cdf86d28c61f76d7d70f4af3e0471}{save\+Fo\+File}} (const std\+::string \&file\+Name, const std\+::string \&data)=0
+\item 
+virtual std\+::string \mbox{\hyperlink{struct_abstract_controller_aa6cd3662759d43697c43a17d03bf0f1f}{read\+From\+File}} (const std\+::string \&file\+Name)=0
 \end{DoxyCompactItemize}
 
 
@@ -53,6 +57,26 @@ virtual Abstract\+Controller\+::\texorpdfstring{$\sim$}{\string~}\+Abstract\+Con
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{struct_abstract_controller_aa6cd3662759d43697c43a17d03bf0f1f}\index{AbstractController@{AbstractController}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!AbstractController@{AbstractController}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily \label{struct_abstract_controller_aa6cd3662759d43697c43a17d03bf0f1f} 
+virtual std\+::string Abstract\+Controller\+::read\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_keyboard_controller_ad03c4a274a17c5486a0201035e117aa2}{Keyboard\+Controller}}.
+
+\Hypertarget{struct_abstract_controller_a0b1cdf86d28c61f76d7d70f4af3e0471}\index{AbstractController@{AbstractController}!saveFoFile@{saveFoFile}}
+\index{saveFoFile@{saveFoFile}!AbstractController@{AbstractController}}
+\doxysubsubsection{\texorpdfstring{saveFoFile()}{saveFoFile()}}
+{\footnotesize\ttfamily \label{struct_abstract_controller_a0b1cdf86d28c61f76d7d70f4af3e0471} 
+virtual void Abstract\+Controller\+::save\+Fo\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name}{, }\item[{const std\+::string \&}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_keyboard_controller_ab1e67e9c5ee284256e4c0b956103fd3a}{Keyboard\+Controller}}.
+
 \Hypertarget{struct_abstract_controller_a25475dd8429d7443ccc78f778efc59d1}\index{AbstractController@{AbstractController}!start@{start}}
 \index{start@{start}!AbstractController@{AbstractController}}
 \doxysubsubsection{\texorpdfstring{start()}{start()}}

@@ -37,6 +37,10 @@ Collaboration diagram for Keyboard\+Controller\+:
 void \mbox{\hyperlink{class_keyboard_controller_af76cb11b464094ee1a665ddf77f4e974}{start}} () override
 \item 
 \mbox{\hyperlink{struct_action}{Action}} \mbox{\hyperlink{class_keyboard_controller_af7cf96547e8dcadc5076df377341f2c0}{wait\+Action}} () override
+\item 
+void \mbox{\hyperlink{class_keyboard_controller_ab1e67e9c5ee284256e4c0b956103fd3a}{save\+Fo\+File}} (const std\+::string \&file\+Name, const std\+::string \&data) override
+\item 
+std\+::string \mbox{\hyperlink{class_keyboard_controller_ad03c4a274a17c5486a0201035e117aa2}{read\+From\+File}} (const std\+::string \&file\+Name) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_abstract_controller}{Abstract\+Controller}}}
 \begin{DoxyCompactItemize}
@@ -58,6 +62,26 @@ Keyboard\+Controller\+::\+Keyboard\+Controller (\begin{DoxyParamCaption}\item[{s
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_keyboard_controller_ad03c4a274a17c5486a0201035e117aa2}\index{KeyboardController@{KeyboardController}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!KeyboardController@{KeyboardController}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily \label{class_keyboard_controller_ad03c4a274a17c5486a0201035e117aa2} 
+std\+::string Keyboard\+Controller\+::read\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_abstract_controller_aa6cd3662759d43697c43a17d03bf0f1f}{Abstract\+Controller}}.
+
+\Hypertarget{class_keyboard_controller_ab1e67e9c5ee284256e4c0b956103fd3a}\index{KeyboardController@{KeyboardController}!saveFoFile@{saveFoFile}}
+\index{saveFoFile@{saveFoFile}!KeyboardController@{KeyboardController}}
+\doxysubsubsection{\texorpdfstring{saveFoFile()}{saveFoFile()}}
+{\footnotesize\ttfamily \label{class_keyboard_controller_ab1e67e9c5ee284256e4c0b956103fd3a} 
+void Keyboard\+Controller\+::save\+Fo\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name}{, }\item[{const std\+::string \&}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{struct_abstract_controller_a0b1cdf86d28c61f76d7d70f4af3e0471}{Abstract\+Controller}}.
+
 \Hypertarget{class_keyboard_controller_af76cb11b464094ee1a665ddf77f4e974}\index{KeyboardController@{KeyboardController}!start@{start}}
 \index{start@{start}!KeyboardController@{KeyboardController}}
 \doxysubsubsection{\texorpdfstring{start()}{start()}}

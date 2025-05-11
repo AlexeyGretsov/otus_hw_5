@@ -1,5 +1,5 @@
 <map id="KeyboardController" name="KeyboardController">
-<area shape="rect" id="Node000001" title="Keyboard controller class." alt="" coords="6,160,149,267"/>
-<area shape="rect" id="Node000002" href="$struct_abstract_controller.html" title="Controllers interface class." alt="" coords="5,5,150,112"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,127,80,161,75,161,75,127"/>
+<area shape="rect" id="Node000001" title="Keyboard controller class." alt="" coords="6,201,149,349"/>
+<area shape="rect" id="Node000002" href="$struct_abstract_controller.html" title="Controllers interface class." alt="" coords="5,5,150,153"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,168,80,201,75,201,75,168"/>
 </map>

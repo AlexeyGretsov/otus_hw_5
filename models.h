@@ -15,7 +15,8 @@ struct AbstractModel {
   virtual ~AbstractModel() = default;
 
   virtual void addShape(std::unique_ptr<AbstractShape> shape) = 0;
-  virtual void removeShape(size_t index) = 0;
+  virtual void removeLastShape() = 0;
+  virtual void reset() = 0;
   virtual const std::vector<std::unique_ptr<AbstractShape>> &
   getShapes() const = 0;
 
@@ -34,12 +35,13 @@ public:
 
     shapes.push_back(std::move(shape));
   }
-  void removeShape(size_t index) override {
-    if (index >= shapes.size()) {
-      return;
+  void removeLastShape() override {
+    if (not shapes.empty()) {
+      shapes.pop_back();
     }
-    shapes.erase(shapes.begin() + index);
   }
+  void reset() override { shapes.clear(); }
+
   const std::vector<std::unique_ptr<AbstractShape>> &
   getShapes() const override {
     return shapes;
